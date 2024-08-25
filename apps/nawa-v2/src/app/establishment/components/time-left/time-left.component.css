@@ -1,0 +1,10 @@
+.done::before {
+  content: '';
+  position: absolute;
+  top: 38%;
+  right: 5px;
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+  background-color: theme('colors.red-text');
+}

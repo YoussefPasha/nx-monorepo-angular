@@ -1,0 +1,167 @@
+<header>
+  <div class="sticky z-[100] top-0 w-full">
+    <div id="color-before-header" class="h-[0.5rem] bg-primary"></div>
+    <div
+      id="main-header"
+      class="flex flex-row items-center justify-start flex-grow gap-2 xs:gap-1 bg-primary-darken-2 sm:gap-4 h-28"
+    >
+      <div class="flex flex-row justify-start flex-grow">
+        <div routerLink="/establishment" class="mx-10 cursor-pointer">
+          <img src="/assets/images/SVGs/logo.svg" alt="logo" />
+        </div>
+        <div class="flex items-center justify-center">
+          <app-link-header
+            [label]="'header.main'"
+            [linkRouter]="'/establishment'"
+            [hasSpace]="true"
+          ></app-link-header>
+          <app-link-header
+            [label]="'header.introduction_to_the_platform'"
+            [linkRouter]="'/establishment'"
+            [hasSpace]="true"
+          ></app-link-header>
+          <app-link-header
+            [label]="'header.directory_of_non_profit_entities'"
+            [linkRouter]="'/establishment'"
+            [hasSpace]="true"
+          ></app-link-header>
+          <app-link-header
+            [label]="'header.customer_care_channels'"
+            [linkRouter]="'/establishment'"
+            [hasSpace]="false"
+          ></app-link-header>
+        </div>
+      </div>
+      <div>
+        <div class="items-center hidden md:flex">
+          <div class="flex items-center ml-[1rem]">
+            <input
+              translate
+              type="text"
+              placeholder="{{ 'header.search_placeholder' | translate }}"
+              class="bg-separate outline-none p-3 text-[0.75rem] text-white rounded-s-md"
+            />
+            <button class="bg-separate p-[0.6rem] rounded-e-md">
+              <img src="/assets/images/SVGs/search.svg" alt="search" />
+            </button>
+          </div>
+          <div class="flex items-center gap-[1rem] ml-[1rem]">
+            <button
+              class="hover:opacity-70 p-[0.6rem] text-[0.5rem] rounded-md bg-separate"
+            >
+              <img
+                src="/assets/images/SVGs/notification.svg"
+                alt="notification"
+              />
+            </button>
+            <button
+              class="hover:opacity-70 p-[0.6rem] text-[0.6rem] rounded-md bg-separate"
+            >
+              <img src="/assets/images/SVGs/questions.svg" alt="questions" />
+            </button>
+            <button
+              class="hover:opacity-70 p-[0.6rem] text-[0.6rem] rounded-md bg-separate"
+            >
+              <img src="/assets/images/SVGs/settings.svg" alt="settings" />
+            </button>
+          </div>
+          <div class="flex items-center gap-[0.5rem] pl-[1rem]">
+            <div class="flex items-center justify-center profile-pic">
+              <img
+                src="/assets/images/img/profilepic.jpg"
+                class="w-[3.125rem] h-[3.125rem] object-cover object-top rounded-full"
+                alt="profile_pic"
+              />
+            </div>
+            <div class="flex flex-col">
+              <span class="text-[0.75rem] text-white font-light">{{
+                'header.welcome' | translate
+              }}</span>
+              <span class="text-[0.875rem] text-white font-medium">{{
+                'header.mock_name' | translate
+              }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="hidden bg-white md:flex w-full text-primary-darken-2 text-[0.75rem]"
+    >
+      <div class="flex mr-[14%]">
+        <div
+          class="nav-elem relative justify-center flex px-[1.5rem] py-[1rem]"
+          routerLink="/establishment/control-panel"
+        >
+          <p class="flex gap-1 cursor-pointer select-none hover:opacity-80">
+            <img
+              src="/assets/images/SVGs/subheader/maincontrolpanel.svg"
+              alt="control_panel"
+            />
+            {{ 'sub_header.cPanel' | translate }}
+          </p>
+        </div>
+        <div
+          class="nav-elem relative justify-center flex px-[1.5rem] py-[1rem]"
+          routerLink="/establishment/my-entities"
+        >
+          <p class="flex gap-1 cursor-pointer select-none hover:opacity-80">
+            <img
+              src="/assets/images/SVGs/subheader/heart.svg"
+              alt="control_panel"
+            />
+            {{ 'sub_header.my_entities' | translate }}
+          </p>
+        </div>
+        <div
+          class="nav-elem relative justify-center flex px-[1.5rem] py-[1rem]"
+          routerLink="/establishment/establishment-drafts"
+        >
+          <p class="flex gap-1 cursor-pointer select-none hover:opacity-80">
+            <img
+              src="/assets/images/SVGs/subheader/note.svg"
+              alt="control_panel"
+            />
+            {{ 'sub_header.establishment_drafts' | translate }}
+          </p>
+        </div>
+        <div
+          class="nav-elem relative justify-center flex px-[1.5rem] py-[1rem]"
+          routerLink="/establishment/request-review"
+        >
+          <p class="flex gap-1 cursor-pointer select-none hover:opacity-80">
+            <img
+              src="/assets/images/SVGs/subheader/orders.svg"
+              alt="reviewing_requests"
+            />
+            {{ 'sub_header.reviewing_requests' | translate }}
+          </p>
+        </div>
+        <div
+          class="nav-elem relative justify-center flex px-[1.5rem] py-[1rem]"
+          routerLink="/establishment/archived-requests"
+        >
+          <p class="flex gap-1 cursor-pointer select-none hover:opacity-80">
+            <img
+              src="/assets/images/SVGs/subheader/update.svg"
+              alt="archived_requests"
+            />
+            {{ 'sub_header.archived_requests' | translate }}
+          </p>
+        </div>
+        <div
+          class="nav-elem relative justify-center flex px-[1.5rem] py-[1rem]"
+          routerLink="/establishment/control-panel"
+        >
+          <p class="flex gap-1 cursor-pointer select-none hover:opacity-80">
+            <img
+              src="/assets/images/SVGs/subheader/hammer.svg"
+              alt="establishment"
+            />
+            {{ 'sub_header.establishment' | translate }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

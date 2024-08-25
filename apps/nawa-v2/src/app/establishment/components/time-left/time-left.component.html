@@ -1,0 +1,47 @@
+<div>
+  @if(day === 0 && hour === 0 && min === 0){
+  <div
+    class="done relative pr-[1rem] bg-red-bg items-center p-[0.5rem] rounded-lg text-red-text text-[0.625rem]"
+  >
+    {{ 'control-panel.reason_for_unaccepted' | translate }}
+  </div>
+  } @else if(day === 0){
+  <div
+    class="bg-red-bg items-center p-[0.5rem] rounded-lg text-red-text text-[0.625rem]"
+  >
+    <p class="flex items-end gap-1">
+      <span>
+        <img
+          src="/assets/images/SVGs/controlpanelempty/clock.svg"
+          alt="clock"
+        />
+      </span>
+      <span>{{ min }}</span>
+      <span>{{ minText | translate }}</span>
+      <span>{{ hour }}</span>
+      <span>{{ hourText | translate }}</span>
+      <span>{{ day }}</span>
+      <span>{{ dayText | translate }}</span>
+    </p>
+  </div>
+  } @else{
+  <div
+    class="bg-secondary items-center p-[0.5rem] rounded-lg text-black text-[0.625rem]"
+  >
+    <p class="flex items-end gap-1">
+      <span>
+        <img
+          src="/assets/images/SVGs/controlpanelempty/clockblack.svg"
+          alt="clockBlack"
+        />
+      </span>
+      <span>{{ min }}</span>
+      <span>{{ minText | translate }}</span>
+      <span>{{ hour }}</span>
+      <span>{{ hourText | translate }}</span>
+      <span>{{ day }}</span>
+      <span>{{ dayText | translate }}</span>
+    </p>
+  </div>
+  }
+</div>

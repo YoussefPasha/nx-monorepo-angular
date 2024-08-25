@@ -1,0 +1,32 @@
+@if(type==='primary'){
+<button
+  class="bg-inherit border-[1px] border-primary text-primary text-[0.875rem] rounded-md p-[1rem] hover:contrast-150 disabled:bg-primary-lighten-1 w-full"
+>
+  {{ title | translate }}
+</button>
+}@else if (type==='secondary') {
+<button
+  class="bg-inherit bg-primary hover:contrast-150 text-black text-[0.875rem] rounded-md p-[1rem] w-full disabled:bg-primary-lighten-1"
+>
+  {{ title | translate }}
+</button>
+}@else if (type==='red') {
+<button
+  class="border-[1px]  hover:contrast-150 border-red-text text-red-text text-[0.875rem] rounded-md p-[1rem] w-full flex items-center justify-center gap-[0.5rem]"
+>
+  {{ title | translate }}
+</button>
+} @else if(type==='delete'){
+<button
+  class="bg-red-bg border-[1px] hover:contrast-150 border-red-text text-red-text text-[0.875rem] rounded-md p-[1rem] w-full flex items-center justify-center gap-[0.5rem]"
+>
+  <img src="/assets/images/SVGs/controlpanelempty/trash.svg" alt="trash" />
+  {{ title | translate }}
+</button>
+} @else if (type==='more') {
+<button
+  class="bg-transperant hover:contrast-150 border-[1px] border-secondary-border text-secondary-border text-[0.875rem] rounded-md p-[1rem] hover:opacity-80 flex items-center justify-center gap-[0.5rem]"
+>
+  <span class="text-[1rem] font-bold"> ⋮ </span>
+</button>
+}

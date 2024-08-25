@@ -1,0 +1,61 @@
+@if(type==="search"){
+<div>
+  <div class="flex justify-between items-end mb-[1rem]">
+    <div class="flex flex-col">
+      <h2
+        class="title p-[1rem] relative text-[1rem] font-[600] text-primary-darken-2"
+      >
+        {{ title | translate }} <span *ngIf="length">({{ length }})</span>
+      </h2>
+      <p class="text-[0.75rem] text-secondary-darken-1 font-[400]">
+        {{ subTitle | translate }}
+      </p>
+    </div>
+    <div class="flex items-center">
+      <input
+        class="p-3 bg-transparent border-2 border-l-0 outline-none border-secondary-border placeholder:text-secondary-border"
+        type="text"
+        translate
+        [placeholder]="placeholder | translate"
+      />
+      <button
+        class="z-10 h-full p-4 border-2 border-r-0 cursor-pointer border-secondary-border"
+      >
+        <img
+          src="/assets/images/SVGs/EstablishmentDrafts/search.svg"
+          alt="search"
+        />
+      </button>
+    </div>
+  </div>
+
+  <div>
+    <ng-content></ng-content>
+  </div>
+</div>
+} @else {
+<div>
+  <div class="flex justify-between items-end mb-[1rem]">
+    <div class="flex flex-col">
+      <h2
+        class="title p-[1rem] relative text-[1rem] font-[600] text-primary-darken-2"
+      >
+        {{ title | translate }} <span>({{ length }})</span>
+      </h2>
+      <p class="text-[0.75rem] text-secondary-darken-1 font-[400]">
+        {{ subTitle| translate }}
+      </p>
+    </div>
+    <div>
+      <p
+        class="font-[500] text-[0.75rem] text-primary hover:underline cursor-pointer"
+      >
+        {{ boxName | translate }} (0)
+      </p>
+    </div>
+  </div>
+  <div>
+    <ng-content></ng-content>
+  </div>
+</div>
+}

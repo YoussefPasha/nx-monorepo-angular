@@ -1,0 +1,15 @@
+<div>
+  <div class="flex text-[#FFF] bg-primary-darken-2 mb-[2rem]">
+    <div class="flex mx-auto justify-between p-[1rem] py-[1.4rem]">
+      <div class="flex flex-col">
+        <span class="text-[0.875rem]">{{ mainControlPanel | translate }}</span>
+        <p class="text-[1.313rem] font-[700]">
+          {{ welcomePropName | translate }}
+        </p>
+      </div>
+    </div>
+    <div class="flex items-center justify-between mx-auto">
+      <app-button [type]="'primary'" [title]="mainControlPanel"></app-button>
+    </div>
+  </div>
+</div>

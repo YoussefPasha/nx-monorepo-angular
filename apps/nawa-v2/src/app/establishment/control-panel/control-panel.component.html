@@ -1,0 +1,135 @@
+<div class="flex flex-col">
+  <div class="flex text-white bg-primary-darken-2 mb-[2rem]">
+    <div class="flex mx-auto justify-between p-[1rem] py-[1.4rem]">
+      <div class="flex flex-col">
+        <span class="text-[0.875rem]">{{
+          'control-panel.maincontrolpanel' | translate
+        }}</span>
+        <p class="text-[1.313rem] font-[700]">
+          {{ 'control-panel.welcomepropname' | translate }}
+        </p>
+      </div>
+    </div>
+    <div class="flex items-center justify-between mx-auto">
+      <app-button
+        [type]="'primary'"
+        [title]="'control-panel.maincontrolpanel'"
+      ></app-button>
+    </div>
+  </div>
+  <div class="flex flex-col items-center justify-center">
+    <div class="flex flex-col justify-center w-2/3">
+      <app-empty-control-panel-box
+        [title]="'control-panel.mock-data1.title'"
+        [subTitle]="'control-panel.mock-data1.subtitle'"
+        [boxName]="'control-panel.mock-data1.boxName'"
+        [mainText]="'control-panel.mock-data1.mainText'"
+        [type]="'entity'"
+      ></app-empty-control-panel-box>
+      <div
+        class="bg-primary-darken-2 rounded-lg mb-[1rem] flex items-center py-[2rem] px-[1.5rem] justify-between"
+      >
+        <div class="max-w-[70%] flex flex-col text-white gap-[1rem]">
+          <h2 class="text-[1rem] font-[600]">
+            {{ 'control-panel.mainSubEntity' | translate }}
+          </h2>
+          <p class="text-[0.75rem] font-[300]">
+            {{ 'control-panel.subSubEntity' | translate }}
+          </p>
+        </div>
+        <div class="justify-end">
+          <app-button
+            [type]="'primary'"
+            [title]="'control-panel.button2Text'"
+          ></app-button>
+        </div>
+      </div>
+      <app-empty-control-panel-box
+        [title]="'control-panel.mock-data2.title'"
+        [subTitle]="'control-panel.mock-data2.subtitle'"
+        [boxName]="'control-panel.mock-data2.boxName'"
+        [mainText]="'control-panel.mock-data2.mainText'"
+        [type]="'meswdat'"
+      ></app-empty-control-panel-box>
+      <app-empty-control-panel-box
+        [title]="'control-panel.mock-data3.title'"
+        [subTitle]="'control-panel.mock-data3.subtitle'"
+        [boxName]="'control-panel.mock-data3.boxName'"
+        [mainText]="'control-panel.mock-data3.mainText'"
+        [type]="'drafts'"
+      ></app-empty-control-panel-box>
+    </div>
+    <div class="w-2/3 mb-8">
+      <div class="flex flex-col">
+        <h2
+          class="title p-4 relative text-[1rem] font-semibold text-primary-darken-2"
+        >
+          {{ 'control-panel.callcenterTitle' | translate }}
+        </h2>
+        <p class="text-[0.75rem] text-secondary-darken-1 font-[400] mb-[1rem]">
+          {{ 'control-panel.callcentersubtitle' | translate }}
+        </p>
+
+        <div
+          class="rounded-md flex justify-between items-center gap-[1rem] p-[1.25rem] bg-white max-w-[28rem] h-[5.625rem]"
+        >
+          <img
+            src="/assets/images/SVGs/controlpanelempty/handset.svg"
+            alt="handset"
+          />
+          <div>
+            <h2>{{ 'control-panel.callcentermain' | translate }}</h2>
+            <p
+              class="text-[0.75rem] text-secondary-darken-1 font-[400] mb-[1rem]"
+            >
+              {{ 'control-panel.callcentersubmain' | translate }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-2/3 mb-[2rem]">
+      <div class="flex flex-col">
+        <div class="flex items-end justify-between">
+          <div>
+            <h2
+              class="title p-[1rem] relative text-[1rem] font-[600] text-primary-darken-2"
+            >
+              {{ 'control-panel.instructionstitle' | translate }}
+            </h2>
+            <p
+              class="text-[0.75rem] text-secondary-darken-1 font-[400] mb-[1rem]"
+            >
+              {{ 'control-panel.subinstructionstitle' | translate }}
+            </p>
+          </div>
+          <div>
+            <p
+              class="font-[500] text-[0.75rem] text-primary hover:underline cursor-pointer"
+            >
+              {{ 'control-panel.instructionsnotif' | translate }} (6)
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-4 mt-5">
+          <app-tips-and-instructions-card
+            [mainTitle]="'control-panel.card1.maintitle'"
+            [subTitle]="'control-panel.card1.subtitle'"
+            [paragraph]="'control-panel.card1.text'"
+          ></app-tips-and-instructions-card>
+          <app-tips-and-instructions-card
+            [mainTitle]="'control-panel.card2.maintitle'"
+            [subTitle]="'control-panel.card2.subtitle'"
+            [paragraph]="'control-panel.card2.text'"
+          ></app-tips-and-instructions-card>
+          <app-tips-and-instructions-card
+            [mainTitle]="'control-panel.card3.maintitle'"
+            [subTitle]="'control-panel.card3.subtitle'"
+            [paragraph]="'control-panel.card3.text'"
+          >
+          </app-tips-and-instructions-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

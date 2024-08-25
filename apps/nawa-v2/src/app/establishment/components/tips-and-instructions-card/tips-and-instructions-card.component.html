@@ -1,0 +1,17 @@
+<div class="flex flex-col w-80 h-80">
+  <div
+    class="card-header after:bg-card-bg rounded-t-md relative h-[60%] bg-yellow-500 flex justify-between items-end p-[1.7rem]"
+  >
+    <h2 class="text-[1rem] z-[50] font-[700] text-white">
+      {{ mainTitle | translate }}
+    </h2>
+    <div class="triangle"></div>
+    <div class="triangle-small"></div>
+  </div>
+  <div class="h-[40%] rounded-b-md flex flex-col gap-[1rem] bg-white p-[1rem]">
+    <h3 class="font-[600] text-[0.75rem]">{{ subTitle | translate }}</h3>
+    <p class="text-[0.75rem] font-[400] text-secondary-darken-1">
+      {{ paragraph | translate }}
+    </p>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="flex justify-end w-full">
+  <div class="w-full max-w-64">
+    <app-main-button (handleClick)="onClick()" [type]="'secondary'">
+      <div class="flex items-center justify-center">
+        {{ 'establishment.complete_establishment_steps' | translate }}
+        <img src="/assets/images/SVGs/left-arrow.svg" alt="left-arrow" />
+      </div>
+    </app-main-button>
+  </div>
+</div>

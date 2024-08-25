@@ -1,0 +1,74 @@
+<div>
+  <div class="mb-12">
+    <app-subtitle
+      [title]="'establishment.membership_gamaaya_title'"
+      [details]="'establishment.membership_gamaaya_details'"
+    ></app-subtitle>
+    <div class="h-20 mt-2">
+      <app-applicant-radio-buttons
+        (handleSelect)="handleSelectEvent($event)"
+      ></app-applicant-radio-buttons>
+    </div>
+  </div>
+  <div *ngIf="selectedType === 'selection1'">
+    <div class="mb-8">
+      <app-subtitle
+        [title]="'establishment.applicant_position_title'"
+        [details]="'establishment.applicant_position_details'"
+      ></app-subtitle>
+      <div class="h-16 mt-2">
+        <app-applicant-positions-radio-buttons
+          [selections]="selections"
+        ></app-applicant-positions-radio-buttons>
+      </div>
+    </div>
+    <div class="mb-12">
+      <app-subtitle
+        [title]="'establishment.certificates_title'"
+        [details]="'establishment.certificates_details'"
+      ></app-subtitle>
+      <div class="mt-2">
+        <span class="inline-block text-xs text-secondary-darken-1">
+          {{ 'establishment.supporting_documents_title' | translate }}
+        </span>
+        <app-drop-file-upload></app-drop-file-upload>
+        <span class="inline-block mt-2 text-xs text-secondary-darken-1">
+          {{ 'establishment.supporting_documents_note' | translate }}
+        </span>
+      </div>
+    </div>
+    <div class="mb-8">
+      <app-subtitle
+        [title]="'establishment.applicant_attributes_title'"
+        [details]="'establishment.applicant_attributes_details'"
+      ></app-subtitle>
+      <div class="mt-3.5 mr-7">
+        <app-applicant-attribute-radio-buttons></app-applicant-attribute-radio-buttons>
+      </div>
+    </div>
+    <div class="mb-6">
+      <app-subtitle
+        [title]="'establishment.legal_person_type_title'"
+      ></app-subtitle>
+      <div class="mt-3.5 mr-7">
+        <app-legal-person-types-radio-buttons></app-legal-person-types-radio-buttons>
+      </div>
+    </div>
+    <div class="mb-9">
+      <span class="inline-block text-xs text-secondary-darken-1">
+        {{ 'establishment.approval_document' | translate }}
+      </span>
+      <app-drop-file-upload></app-drop-file-upload>
+    </div>
+  </div>
+  <app-establishment-home-btn
+    (handleClick)="handleModalOpen()"
+  ></app-establishment-home-btn>
+</div>
+
+@if(modalOpen===true){
+<app-modal
+  (handleModalClose)="(handleModalClose)"
+  [type]="'full-screen-modal'"
+></app-modal>
+}

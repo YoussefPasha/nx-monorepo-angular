@@ -1,0 +1,247 @@
+<div class="flex flex-col w-full">
+  <app-control-panel-welcome
+    [mainControlPanel]="'control-panel.maincontrolpanel'"
+    [welcomePropName]="'control-panel.welcomepropname'"
+  ></app-control-panel-welcome>
+  <div class="flex flex-col items-center justify-center">
+    <div class="flex flex-col justify-center w-2/3">
+      <app-control-panel-information
+        [title]="'control-panel.mock-data1.title'"
+        [subTitle]="'control-panel.mock-data1.subtitle'"
+        [type]="'entity'"
+        [boxName]="'control-panel.mock-data1.boxName'"
+      >
+        <div class="flex flex-col w-full gap-4 lg:flex-row">
+          <div class="w-full">
+            <app-entity-card
+              [association]="'control-panel.entityCard1.association'"
+              [mainTitle]="'control-panel.entityCard1.mainTitle'"
+              [text]="'control-panel.entityCard1.text'"
+              [type]="1"
+              [min]="'0'"
+              [hour]="'5'"
+              [day]="'9'"
+              [dayText]="'control-panel.entityCard1.dayText'"
+              [minText]="'control-panel.entityCard1.minText'"
+              [hourText]="'control-panel.entityCard1.hourText'"
+              [memberText]="'control-panel.entityCard1.memberText'"
+              [memberNum]="'control-panel.entityCard1.memberNum'"
+              [nationalNum]="'control-panel.entityCard1.nationalNum'"
+              [Button1Text]="'control-panel.entityCard1.button1text'"
+              [Button2Text]="'control-panel.entityCard1.button2text'"
+            ></app-entity-card>
+          </div>
+          <div class="w-full">
+            <app-entity-card
+              [association]="'control-panel.entityCard2.association'"
+              [mainTitle]="'control-panel.entityCard2.mainTitle'"
+              [text]="'control-panel.entityCard2.text'"
+              [type]="2"
+              [dayText]="'control-panel.entityCard2.dayText'"
+              [minText]="'control-panel.entityCard2.minText'"
+              [hourText]="'control-panel.entityCard2.hourText'"
+              [memberText]="'control-panel.entityCard2.memberText'"
+              [memberNum]="'control-panel.entityCard2.memberNum'"
+              [nationalNum]="'control-panel.entityCard2.nationalNum'"
+              [Button1Text]="'control-panel.entityCard2.button1text'"
+              [Button2Text]="'control-panel.entityCard2.button2text'"
+            ></app-entity-card>
+          </div>
+        </div>
+        <app-entity-sub-card
+          [mainSubEntity]="'control-panel.mainSubEntity'"
+          [subSubEntity]="'control-panel.subSubEntity'"
+          [button2Text]="'control-panel.button2Text'"
+        >
+        </app-entity-sub-card>
+      </app-control-panel-information>
+      <app-control-panel-information
+        [title]="'control-panel.mock-data2.title'"
+        [subTitle]="'control-panel.mock-data2.subtitle'"
+        [type]="'meswdat'"
+        [boxName]="'control-panel.mock-data2.boxName'"
+      >
+        <div class="flex w-full gap-4">
+          <div class="w-full">
+            <app-draft-card
+              [orderText]="'control-panel.draftsCard1.orderText'"
+              [orderNum]="'control-panel.draftsCard1.orderNum'"
+              [sentText]="'control-panel.draftsCard1.sentText'"
+              [sentDate]="'control-panel.draftsCard1.sentDate'"
+              [subMain]="'control-panel.draftsCard1.subMain'"
+              [main]="'control-panel.draftsCard1.main'"
+              [button1]="'control-panel.draftsCard1.button1'"
+              [button2]="'control-panel.draftsCard1.button2'"
+              [icon]="'/assets/images/SVGs/controlpanelempty/kiosk.svg'"
+            ></app-draft-card>
+          </div>
+          <div class="w-full">
+            <app-draft-card
+              [orderText]="'control-panel.draftsCard2.orderText'"
+              [orderNum]="'control-panel.draftsCard2.orderNum'"
+              [sentText]="'control-panel.draftsCard2.sentText'"
+              [sentDate]="'control-panel.draftsCard2.sentDate'"
+              [subMain]="'control-panel.draftsCard2.subMain'"
+              [main]="'control-panel.draftsCard2.main'"
+              [button1]="'control-panel.draftsCard2.button1'"
+              [button2]="'control-panel.draftsCard2.button2'"
+              [icon]="'/assets/images/SVGs/controlpanelempty/kiosk.svg'"
+            ></app-draft-card>
+          </div>
+        </div>
+      </app-control-panel-information>
+      <app-control-panel-information
+        [title]="'control-panel.mock-data3.title'"
+        [subTitle]="'control-panel.mock-data3.subtitle'"
+        [type]="'drafts'"
+        [boxName]="'control-panel.mock-data3.boxName'"
+      >
+        <div class="flex w-full gap-4">
+          <div class="w-full">
+            <app-establishment-card
+              [orderText]="'control-panel.establishmentCard1.orderText'"
+              [orderNum]="1324141"
+              [sentText]="'control-panel.establishmentCard1.sentText'"
+              [sentDate]="'control-panel.establishmentCard1.sentDate'"
+              [subMain]="'control-panel.establishmentCard1.subMain'"
+              [main]="'control-panel.establishmentCard1.main'"
+              [button1]="'control-panel.establishmentCard1.button1'"
+              [button2]="'control-panel.establishmentCard1.button2'"
+              [icon]="'/assets/images/SVGs/controlpanelempty/kiosk.svg'"
+              [timeLeftText]="'control-panel.establishmentCard1.timeLefttext'"
+              [min]="29"
+              [hour]="11"
+              [day]="4"
+              [dayText]="'control-panel.establishmentCard1.dayText'"
+              [minText]="'control-panel.establishmentCard1.minText'"
+              [hourText]="'control-panel.establishmentCard1.hourText'"
+              [entityNameText]="
+                'control-panel.establishmentCard1.entityNameText'
+              "
+              [memberAcceptanceText]="
+                'control-panel.establishmentCard1.memberAcceptanceText'
+              "
+              [waiting]="
+                'control-panel.establishmentCard1.memberAcceptance.waiting'
+              "
+              [accepted]="
+                'control-panel.establishmentCard1.memberAcceptance.accepted'
+              "
+              [rejected]="
+                'control-panel.establishmentCard1.memberAcceptance.rejected'
+              "
+              [entityName]="'control-panel.establishmentCard1.entityName'"
+            ></app-establishment-card>
+          </div>
+          <div class="w-full">
+            <app-establishment-card
+              [orderText]="'control-panel.establishmentCard2.orderText'"
+              [orderNum]="1324141"
+              [sentText]="'control-panel.establishmentCard2.sentText'"
+              [sentDate]="'control-panel.establishmentCard2.sentDate'"
+              [subMain]="'control-panel.establishmentCard2.subMain'"
+              [main]="'control-panel.establishmentCard2.main'"
+              [button1]="'control-panel.establishmentCard2.button1'"
+              [button2]="'control-panel.establishmentCard2.button2'"
+              [icon]="'/assets/images/SVGs/controlpanelempty/kiosk.svg'"
+              [timeLeftText]="'control-panel.establishmentCard2.timeLefttext'"
+              [min]="9"
+              [hour]="5"
+              [day]="0"
+              [dayText]="'control-panel.establishmentCard2.dayText'"
+              [minText]="'control-panel.establishmentCard2.minText'"
+              [hourText]="'control-panel.establishmentCard2.hourText'"
+              [entityNameText]="
+                'control-panel.establishmentCard2.entityNameText'
+              "
+              [memberAcceptanceText]="
+                'control-panel.establishmentCard2.memberAcceptanceText'
+              "
+              [waiting]="
+                'control-panel.establishmentCard2.memberAcceptance.waiting'
+              "
+              [accepted]="
+                'control-panel.establishmentCard2.memberAcceptance.accepted'
+              "
+              [rejected]="
+                'control-panel.establishmentCard2.memberAcceptance.rejected'
+              "
+              [entityName]="'control-panel.establishmentCard2.entityName'"
+            ></app-establishment-card>
+          </div>
+        </div>
+      </app-control-panel-information>
+    </div>
+    <div class="w-2/3 mb-[2rem]">
+      <div class="flex flex-col">
+        <h2
+          class="title p-[1rem] relative text-[1rem] font-[600] text-primary-darken-2"
+        >
+          {{ 'control-panel.callcenterTitle' | translate }}
+        </h2>
+        <p class="text-[0.75rem] text-secondary-darken-1 font-[400] mb-[1rem]">
+          {{ 'control-panel.callcentersubtitle' | translate }}
+        </p>
+
+        <div
+          class="rounded-md flex items-center gap-[1rem] p-[1.25rem] bg-white w-[55%] h-[5.625rem]"
+        >
+          <img
+            src="/assets/images/SVGs/controlpanelempty/handset.svg"
+            alt="callcenter"
+          />
+          <div>
+            <h2>{{ 'control-panel.callcentermain' | translate }}</h2>
+            <p
+              class="text-[0.75rem] text-secondary-darken-1 font-[400] mb-[1rem]"
+            >
+              {{ 'control-panel.callcentersubmain' | translate }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-2/3 mb-[2rem]">
+      <div class="flex flex-col">
+        <div class="flex items-end justify-between">
+          <div>
+            <h2
+              class="title p-[1rem] relative text-[1rem] font-[600] text-primary-darken-2"
+            >
+              {{ 'control-panel.instructionstitle' | translate }}
+            </h2>
+            <p
+              class="text-[0.75rem] text-secondary-darken-1 font-[400] mb-[1rem]"
+            >
+              {{ 'control-panel.subinstructionstitle' | translate }}
+            </p>
+          </div>
+          <div>
+            <p
+              class="font-[500] text-[0.75rem] text-primary hover:underline cursor-pointer"
+            >
+              {{ 'control-panel.instructionsnotif' | translate }} (6)
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-4 mt-5">
+          <app-tips-and-instructions-card
+            [mainTitle]="'control-panel.card1.maintitle'"
+            [subTitle]="'control-panel.card1.subtitle'"
+            [paragraph]="'control-panel.card1.text'"
+          ></app-tips-and-instructions-card>
+          <app-tips-and-instructions-card
+            [mainTitle]="'control-panel.card2.maintitle'"
+            [subTitle]="'control-panel.card2.subtitle'"
+            [paragraph]="'control-panel.card2.text'"
+          ></app-tips-and-instructions-card>
+          <app-tips-and-instructions-card
+            [mainTitle]="'control-panel.card3.maintitle'"
+            [subTitle]="'control-panel.card3.subtitle'"
+            [paragraph]="'control-panel.card3.text'"
+          ></app-tips-and-instructions-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

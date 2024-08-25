@@ -1,0 +1,107 @@
+<div class="flex w-full h-56 gap-5">
+  <div class="flex w-full h-56">
+    <input
+      type="radio"
+      id="civil-association"
+      name="civil-association"
+      (click)="handleClick('civil-association')"
+      [checked]="selectedType === 'civil-association'"
+      class="hidden"
+    />
+    <label
+      for="civil-association"
+      [ngClass]="getSelectClasses('civil-association')"
+    >
+      @if(selectedType === 'civil-association'){
+
+      <img
+        class="absolute self-start top-3"
+        src="assets/images/SVGs/establishment/checkmark-clicked.svg"
+        alt="checkmark"
+      />
+      } @else {
+
+      <img
+        class="absolute self-start top-3"
+        src="/assets/images/SVGs/establishment/checkmark.svg"
+        alt="checkmark"
+      />
+      }
+      <img
+        class="mb-4"
+        src="/assets/images/SVGs/establishment/gamaaya.svg"
+        alt="civil-association"
+      />
+      {{ 'establishment.civil-association' | translate }}
+    </label>
+  </div>
+  <div class="flex w-full h-56">
+    <input
+      type="radio"
+      id="civil-institution"
+      name="civil-institution"
+      (click)="handleClick('civil-institution')"
+      [checked]="selectedType === 'civil-institution'"
+      class="hidden"
+    />
+    <label
+      for="civil-institution"
+      [ngClass]="getSelectClasses('civil-institution')"
+    >
+      @if(selectedType === 'civil-institution'){
+
+      <img
+        class="absolute self-start top-3"
+        src="assets/images/SVGs/establishment/checkmark-clicked.svg"
+        alt="checkmark"
+      />
+      } @else {
+
+      <img
+        class="absolute self-start top-3"
+        src="/assets/images/SVGs/establishment/checkmark.svg"
+        alt="checkmark"
+      />
+      }
+      <img
+        class="mb-4"
+        src="/assets/images/SVGs/establishment/organization.svg"
+        alt="civil-association"
+      />
+      {{ 'establishment.organization' | translate }}
+    </label>
+  </div>
+  <div class="flex w-full h-56">
+    <input
+      type="radio"
+      id="family-box"
+      name="family-box"
+      (click)="handleClick('family-box')"
+      [checked]="selectedType === 'family-box'"
+      class="hidden"
+    />
+    <label for="family-box" [ngClass]="getSelectClasses('family-box')">
+      @if(selectedType === 'family-box'){
+
+      <img
+        class="absolute self-start top-3"
+        src="assets/images/SVGs/establishment/checkmark-clicked.svg"
+        alt="checkmark"
+      />
+      } @else {
+
+      <img
+        class="absolute self-start top-3"
+        src="/assets/images/SVGs/establishment/checkmark.svg"
+        alt="checkmark"
+      />
+      }
+      <img
+        class="mb-4"
+        src="/assets/images/SVGs/establishment/family-fund.svg"
+        alt="family-box"
+      />
+      {{ 'establishment.family_fund' | translate }}
+    </label>
+  </div>
+</div>

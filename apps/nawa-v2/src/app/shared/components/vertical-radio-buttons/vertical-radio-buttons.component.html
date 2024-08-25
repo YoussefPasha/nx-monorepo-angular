@@ -1,0 +1,27 @@
+<div class="">
+  <div
+    *ngFor="let selection of selections"
+    class="relative flex items-center w-full mb-4 rounded-md last:m-0"
+    v-bind:key="id"
+  >
+    <div class="self-start h-full peer">
+      <app-radio-button
+        translate
+        [name]="name"
+        [id]="selection.id"
+      ></app-radio-button>
+    </div>
+    <label
+      [for]="selection.id"
+      class="w-full h-full text-default peer-has-[:checked]:text-primary-darken-2 relative flex items-start justify-center flex-col mr-2"
+    >
+      <h3 class="text-sm leading-7">{{ selection.title | translate }}</h3>
+      <span
+        *ngIf="selection.details"
+        class="inline-block text-xs text-secondary-darken-1"
+        v-html="selection.details"
+        >{{ selection.details | translate }}</span
+      >
+    </label>
+  </div>
+</div>

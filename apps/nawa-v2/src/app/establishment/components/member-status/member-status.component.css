@@ -1,0 +1,32 @@
+.status-wait::before {
+    content: "";
+    position: absolute;
+    top: 30%;
+    right: 5px;
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background-color: theme("colors.warning");
+}
+
+.status-accept::before {
+    content: "";
+    position: absolute;
+    top: 30%;
+    right: 5px;
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background-color: theme("colors.accept-text");
+}
+
+.status-reject::before {
+    content: "";
+    position: absolute;
+    top: 40%;
+    right: 5px;
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background-color: theme("colors.red-text");
+}

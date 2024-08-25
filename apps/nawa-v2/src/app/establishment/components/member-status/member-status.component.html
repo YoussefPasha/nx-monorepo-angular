@@ -1,0 +1,24 @@
+<div
+  *ngIf="type === 'waiting'"
+  class="status-wait text-[0.75rem] font-[400] relative bg-waiting-bg text-waiting-text rounded-full py-[3px] px-[1rem]"
+>
+  {{ title | translate }}
+</div>
+<div
+  *ngIf="type === 'accept'"
+  class="status-accept text-[0.75rem] font-[400] relative bg-accept-bg text-accept-text rounded-full py-[3px] px-[1rem]"
+>
+  {{ title | translate }}
+</div>
+<div
+  *ngIf="type === 'reject'"
+  class="status-reject text-[0.75rem] font-[400] relative bg-red-bg text-red-text rounded-full py-[3px] px-[1rem]"
+>
+  {{ title | translate }}
+</div>
+<div
+  *ngIf="type === 'delay'"
+  class="status-reject flex justify-center items-center text-[0.625rem] font-[400] relative bg-red-bg text-red-text rounded-md py-2 px-[1rem]"
+>
+  {{ title | translate }}
+</div>

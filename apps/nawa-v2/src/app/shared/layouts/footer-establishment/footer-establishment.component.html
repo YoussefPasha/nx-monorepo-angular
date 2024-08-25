@@ -1,0 +1,79 @@
+<footer class="w-full mt-auto">
+  <div class="flex flex-col bg-primary-darken-2 p-[4rem] md:flex-row">
+    <div class="w-1/5 p-12 mx-10 cursor-pointer">
+      <img src="/assets/images/SVGs/logo.svg" alt="logo" />
+    </div>
+    <div class="w-1/5">
+      <p class="font-bold text-white text-[1.25rem]">
+        {{ 'footer.overview' | translate }}
+      </p>
+      <div class="flex flex-col gap-3 mt-4">
+        <app-link-footer [label]="'footer.intro'"></app-link-footer>
+        <app-link-footer [label]="'footer.e_service'"></app-link-footer>
+        <app-link-footer [label]="'footer.knowledge_center'"></app-link-footer>
+        <app-link-footer
+          [label]="'footer.news_and_announcements'"
+        ></app-link-footer>
+      </div>
+    </div>
+    <div class="w-1/5">
+      <p class="font-bold text-white text-[1.25rem]">
+        {{ 'footer.import_inks' | translate }}
+      </p>
+      <div class="flex flex-col gap-3 mt-4">
+        <app-link-footer [label]="'footer.non_profit'"></app-link-footer>
+        <app-link-footer [label]="'footer.customer_channels'"></app-link-footer>
+        <app-link-footer [label]="'footer.supervise'"></app-link-footer>
+        <app-link-footer [label]="'footer.national_center'"></app-link-footer>
+      </div>
+    </div>
+    <div class="w-1/5">
+      <p class="font-bold text-white text-[1.25rem]">
+        {{ 'footer.supp_and_assets' | translate }}
+      </p>
+      <div class="flex flex-col gap-3 mt-4">
+        <app-link-footer [label]="'footer.usage_policy'"></app-link-footer>
+        <app-link-footer [label]="'footer.common_questions'"></app-link-footer>
+        <app-link-footer [label]="'footer.accessability'"></app-link-footer>
+      </div>
+    </div>
+
+    <div class="w-1/5 space-y-3">
+      <img src="/assets/images/SVGs/core/vision2030.svg" alt="vision2030" />
+    </div>
+  </div>
+
+  <div
+    class="flex h-[4.2rem] border-t-[1px] pt-5 border-t-separate bg-primary-darken-2 justify-between px-36"
+  >
+    <div class="flex gap-6">
+      <p class="text-[0.75rem] text-white">
+        {{ 'footer.social' | translate }}
+      </p>
+      <img
+        src="/assets/images/SVGs/socials/x.svg"
+        alt="x"
+        class="h-6 w-[1.3rem]"
+      />
+      <img
+        src="/assets/images/SVGs/socials/snap.svg"
+        alt="snap"
+        class="h-6 w-[1.3rem]"
+      />
+      <img
+        src="/assets/images/SVGs/socials/instagram.svg"
+        alt="instagram"
+        class="h-6 w-[1.3rem]"
+      />
+      <img
+        src="/assets/images/SVGs/socials/linkedin.svg"
+        alt="linkedin"
+        class="h-6 w-[1.3rem]"
+      />
+    </div>
+    <p class="text-[0.75rem] text-white">
+      {{ 'footer.all_rights' | translate }}
+    </p>
+  </div>
+  <div id="color-after-footer" class="h-2 bg-primary"></div>
+</footer>

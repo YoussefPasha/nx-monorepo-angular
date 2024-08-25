@@ -1,0 +1,26 @@
+<div class="flex items-center justify-center w-full h-full gap-x-2">
+  <div
+    *ngFor="let selection of selections"
+    class="relative flex items-center w-full h-full py-10 mt-5 bg-white border rounded-md border-gray"
+  >
+    <div class="absolute right-4 peer">
+      <app-radio-button
+        translate
+        [name]="name"
+        [id]="selection.id"
+        (handleSelect)="handleSelectEvent($event)"
+      ></app-radio-button>
+    </div>
+    <label
+      [for]="selection.id"
+      class="w-fullh-full peer-has-[:checked]:text-primary-darken-2 text-default relative flex items-start justify-center flex-col pr-12"
+    >
+      <h3 class="text-sm">{{ selection.title | translate }}</h3>
+      <span
+        *ngIf="selection.details"
+        class="inline-block text-xs text-secondary-darken-1"
+        >{{ selection.details | translate }}</span
+      >
+    </label>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="mx-auto w-1/2 pt-[5rem] px-4 pb-[1.5rem]">
+  <div class="mb-10">
+    <h1 class="mb-4 text-xl font-bold text-primary-darken-2">
+      {{ 'establishment.title' | translate }}
+    </h1>
+    <app-subtitle
+      [title]="'establishment.select_entity_title'"
+      [details]="'establishment.select_entity_details'"
+    ></app-subtitle>
+    <div class="mt-2">
+      <app-select-service-type
+        (handleTypeSelected)="handleTypeSelected($event)"
+      ></app-select-service-type>
+    </div>
+  </div>
+  @if(selectedType==="civil-association"){
+  <app-civil-association></app-civil-association>
+  } @else if(selectedType==="civil-institution"){
+  <app-civil-institution></app-civil-institution>
+  } @else if(selectedType==="family-box"){
+  <app-family-box></app-family-box>
+  }
+</div>

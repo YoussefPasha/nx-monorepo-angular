@@ -1,0 +1,68 @@
+<div class="flex flex-col w-full mb-8 bg-white rounded-lg">
+  <div class="flex border-b-2 border-secondary-border">
+    <div class="w-full flex flex-col gap-[0.625rem] p-[1.3rem]">
+      <div>
+        <p class="text-[0.75rem] text-secondary-darken-1">
+          {{ association | translate }}
+        </p>
+
+        <h2 class="text-[1rem] text-primary-darken-2 font-semibold">
+          {{ mainTitle | translate }}
+        </h2>
+      </div>
+      <div class="flex flex-col">
+        <div class="flex items-center gap-1">
+          <p class="text-secondary-darken-1 text-[0.75rem]">
+            {{ text | translate }}
+          </p>
+          <div
+            *ngIf="type === 1"
+            class="bg-red-bg items-center p-2 rounded-lg text-red-text text-[0.625rem]"
+          >
+            <p class="flex items-end gap-1">
+              <span>
+                <img
+                  src="/assets/images/SVGs/controlpanelempty/clock.svg"
+                  alt="clock"
+                />
+              </span>
+              <span>{{ min }}</span>
+              <span>{{ minText | translate }}</span>
+              <span>{{ hour }}</span>
+              <span>{{ hourText | translate }}</span>
+              <span>{{ day }}</span>
+              <span>{{ dayText | translate }}</span>
+            </p>
+          </div>
+          <div
+            *ngIf="type === 2"
+            class="items-center p-[0.5rem] rounded-lg text-[0.625rem]"
+          >
+            <span>#{{ nationalNum | translate }}</span>
+          </div>
+        </div>
+        <p class="text-[0.75rem] text-secondary-darken-1">
+          {{ memberText | translate }}
+          <span class="text-black font-[600]">{{ memberNum | translate }}</span>
+        </p>
+      </div>
+    </div>
+    <div class="p-[10%]">
+      <img
+        src="/assets/images/SVGs/controlpanelempty/building1.svg"
+        alt="clock"
+        class="w-10 h-10"
+      />
+    </div>
+  </div>
+  <div class="flex justify-between items-center gap-[0.875rem] p-[1.25rem]">
+    <app-button class="w-full" [type]="'primary'" [title]="Button1Text">
+    </app-button>
+    <app-button
+      class="w-full"
+      *ngIf="type === 1"
+      [type]="'secondary'"
+      [title]="Button2Text"
+    ></app-button>
+  </div>
+</div>

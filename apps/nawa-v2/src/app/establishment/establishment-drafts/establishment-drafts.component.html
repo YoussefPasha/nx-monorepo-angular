@@ -1,0 +1,38 @@
+<div class="w-full">
+  <div class="flex items-center gap-2 px-[16%] pt-[1rem]">
+    <h2 class="text-[0.75rem] text-primary-darken-2 font-[500]">
+      {{ 'EstablishmentDrafts.controlpanelText' | translate }}
+    </h2>
+    <span class="text-[0.75rem] text-secondary-darken-1 font-[400]">/</span>
+    <p class="text-[0.75rem] text-secondary-darken-1 font-[400]">
+      {{ 'EstablishmentDrafts.maintitle' | translate }}
+    </p>
+  </div>
+  <div class="flex flex-col items-center justify-center">
+    <div class="flex flex-col justify-center w-2/3">
+      <app-control-panel-information
+        [title]="'EstablishmentDrafts.maintitle'"
+        [subTitle]="'EstablishmentDrafts.subtitle'"
+        [placeholder]="'EstablishmentDrafts.placeholder'"
+        [length]="4"
+        [type]="'search'"
+      >
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div class="w-full">
+            <!-- <app-establishment-drafts
+              :orderText="card.orderText"
+              :orderNum="card.orderNum"
+              :sentText="card.sentText"
+              :sentDate="card.sentDate"
+              :subMain="card.subMain"
+              :main="card.main"
+              :button1="card.button1"
+              :button2="card.button2"
+              :icon="card.icon"
+            ></app-establishment-drafts> -->
+          </div>
+        </div>
+      </app-control-panel-information>
+    </div>
+  </div>
+</div>

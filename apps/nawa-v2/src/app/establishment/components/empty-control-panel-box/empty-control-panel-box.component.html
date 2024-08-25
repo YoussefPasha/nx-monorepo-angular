@@ -1,0 +1,44 @@
+<div class="w-full mb-4">
+  <div class="flex items-end justify-between mb-4">
+    <div class="flex flex-col">
+      <h2
+        class="title p-4 relative text-[1rem] font-semibold text-primary-darken-2"
+      >
+        {{ title | translate }}
+      </h2>
+      <p class="text-[0.75rem] text-secondary-darken-1">
+        {{ subTitle | translate }}
+      </p>
+    </div>
+    <div>
+      <p
+        class="font-[500] text-[0.75rem] text-primary hover:underline cursor-pointer"
+      >
+        {{ boxName | translate }} (0)
+      </p>
+    </div>
+  </div>
+  <div class="grid w-full h-40 bg-white rounded-lg place-content-center">
+    @if(type==="entity"){
+    <div class="flex flex-col items-center justify-center gap-4">
+      <img
+        src="/assets/images/SVGs/controlpanelempty/building1.svg"
+        alt="building1"
+      />
+      <p class="text-[0.75rem] font-[400] text-secondary-darken-1">
+        {{ mainText | translate }}
+      </p>
+    </div>
+    } @else{
+    <div class="flex flex-col items-center justify-center gap-4">
+      <img
+        src="/assets/images/SVGs/controlpanelempty/note.svg"
+        alt="note"
+      />
+      <p class="text-[0.75rem] text-secondary-darken-1">
+        {{ mainText | translate }}
+      </p>
+    </div>
+    }
+  </div>
+</div>

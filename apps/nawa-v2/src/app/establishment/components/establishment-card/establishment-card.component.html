@@ -1,0 +1,104 @@
+<div class="w-full my-8">
+  <div
+    class="top border-2 rounded-t-md border-secondary flex justify-between p-[.75rem]"
+  >
+    <div class="flex items-center gap-1">
+      <p
+        class="font-[500] text-[0.75rem] text-secondary-darken-1 border-l-2 border-secondary"
+      >
+        {{ orderText | translate }}
+      </p>
+      <span class="text-[0.875rem] text-primary-darken-2 font-[600]">
+        #{{ orderNum }}
+      </span>
+    </div>
+    <div class="flex items-center gap-1">
+      <p class="font-[500] text-[0.75rem] text-secondary-darken-1">
+        {{ sentText | translate }}
+      </p>
+      <span class="text-[0.875rem] text-black font-[600]">
+        {{ sentDate | translate }}
+      </span>
+    </div>
+  </div>
+
+  <div class="bottom rounded-b-md bg-white border-[1px] border-seconadry">
+    <div class="flex items-center gap-1 p-[1rem]">
+      <p class="text-[#828282] text-[0.75rem]">
+        {{ timeLeftText | translate }}
+      </p>
+      <app-time-left
+        [min]="min"
+        [hour]="hour"
+        [day]="day"
+        [dayText]="dayText"
+        [minText]="minText"
+        [hourText]="hourText"
+      ></app-time-left>
+    </div>
+    <div
+      class="flex justify-start flex-col gap-[0.5rem] px-[1rem] py-[1.5rem] border-b-2 border-secondary"
+    >
+      <div class="flex bg-secondary w-full p-[0.75rem] rounded-md gap-4">
+        <div class="p-4 bg-white rounded-md">
+          <img [src]="icon" alt="icon" />
+        </div>
+        <div>
+          <p class="text-[0.625rem] font-[400] text-secondary-darken-1">
+            {{ subMain | translate }}
+          </p>
+          <h2 class="text-[0.75rem] font-[600] text-primary-darken-2">
+            {{ main | translate }}
+          </h2>
+        </div>
+      </div>
+      <div>
+        <p class="text-[0.75rem] font-[400] text-secondary-darken-1">
+          {{ entityNameText | translate }}
+        </p>
+        <h1 class="text-[1rem] font-[600] text-primary-darken-2">
+          {{ entityName | translate }}
+        </h1>
+      </div>
+    </div>
+    <div
+      class="flex flex-col justify-start gap-[0.5rem] px-[1rem] py-[1.5rem] border-b-2 border-secondary"
+    >
+      <p class="text-[0.75rem] font-[400] text-secondary-darken-1">
+        {{ memberAcceptanceText | translate }}
+      </p>
+      <div class="flex gap-[1.25rem]">
+        <app-member-status [title]="waiting" type="waiting">
+        </app-member-status>
+        <app-member-status [title]="accepted" type="accept">
+          {{ accepted | translate }}
+        </app-member-status>
+        <app-member-status [title]="rejected" type="reject">
+        </app-member-status>
+      </div>
+    </div>
+    <div
+      *ngIf="day === 0 && min === 0 && hour === 0"
+      class="flex p-[1.313rem] gap-4"
+    >
+      <app-button
+        class="w-full"
+        [title]="button1"
+        [type]="'primary'"
+      ></app-button>
+      <app-button class="w-full" [title]="button2" [type]="'more'"></app-button>
+    </div>
+    <div v-else class="flex p-[1.313rem] gap-4">
+      <app-button
+        class="w-full"
+        [title]="button1"
+        [type]="'primary'"
+      ></app-button>
+      <app-button
+        class="w-full"
+        [title]="button2"
+        [type]="'secondary'"
+      ></app-button>
+    </div>
+  </div>
+</div>

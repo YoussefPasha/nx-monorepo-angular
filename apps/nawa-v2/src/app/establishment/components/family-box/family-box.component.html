@@ -1,0 +1,27 @@
+<div>
+  <div class="mb-12">
+    <app-subtitle
+      [title]="'establishment.membership_family_box_title'"
+      [details]="'establishment.membership_family_box_details'"
+    ></app-subtitle>
+    <div class="h-20 mt-2">
+      <app-applicant-radio-buttons
+        (handleSelect)="handleSelectEvent($event)"
+      ></app-applicant-radio-buttons>
+    </div>
+  </div>
+  <div *ngIf="selectedType === 'selection1'" class="mb-16" >
+    <div class="mb-8">
+      <app-subtitle
+        [title]="'establishment.applicant_position_title'"
+        [details]="'establishment.applicant_position_details_in_family_box'"
+      ></app-subtitle>
+      <div class="h-16 mt-2">
+        <app-applicant-positions-radio-buttons
+          [selections]="selections"
+        ></app-applicant-positions-radio-buttons>
+      </div>
+    </div>
+  </div>
+  <app-establishment-home-btn></app-establishment-home-btn>
+</div>
